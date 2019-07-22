@@ -4,10 +4,11 @@
 
 package com.bilibili.socialize.sample;
 
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bilibili.socialize.sample.helper.ShareHelper;
 import com.bilibili.socialize.share.core.error.BiliShareStatusCode;

@@ -2,10 +2,11 @@
 
 buildscript {
     repositories {
+        google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'com.android.tools.build:gradle:3.4.1'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -14,19 +15,30 @@ buildscript {
 
 allprojects {
     repositories {
+        google()
         jcenter()
         maven { url "https://dl.bintray.com/thelasterstar/maven/" }
     }
 }
 
 ext {
-    buildToolsVersion = '23.0.2'
-    targetSdkVersion = 23
+    buildToolsVersion = '28.0.3'
+    targetSdkVersion = 28
     minSdkVersion = 14
     compileSdkVersion = targetSdkVersion
     versionCode = 8
     versionName = '0.1.0701'
+
+    mavDevelopers = ["Sugerlad":"Sugerlad"]
+    mavSiteUrl = "https://github.com/sugarlad/BiliShare"
+    mavGitUrl = mavSiteUrl + '.git'
+    mavProjectName = 'BiliShare'
+    mavPublishToInternalRepo = true
+    mavRepoInternalUrl = "/Users/DDD/Documents/jitpack"
+    mavLibraryLicenses = ["Apache-2.0":'http://www.apache.org/licenses/LICENSE-2.0.txt']
+    mavLibraryDescription = "A simple description of the project"
 }
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir

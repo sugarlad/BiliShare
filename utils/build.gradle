@@ -1,4 +1,14 @@
 apply plugin: 'com.android.library'
+//apply plugin: 'com.novoda.bintray-release'
+//
+//buildscript {
+//    repositories {
+//        jcenter()
+//    }
+//    dependencies {
+//        classpath 'com.novoda:bintray-release:0.9.1'
+//    }
+//}
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -20,10 +30,26 @@ android {
         abortOnError false
         checkReleaseBuilds false
     }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.3.0'
-    compile 'com.jungly.socialize:biliShare:0.1.0701'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+//    api 'work.ishang.bilishare:share-core:0.1.1'
+    api project(':library')
 }
+
+//publish {
+//    userOrg = 'sugerlad'
+//    repoName = 'BiliShare'
+//    groupId = 'work.ishang.bilishare'
+//    artifactId = 'share-util'
+//    publishVersion = '0.1.1'
+//    desc = 'Some utils easily used for BiliShare'
+//    website = 'https://github.com/Sugarlad/BiliShare'
+//}
+

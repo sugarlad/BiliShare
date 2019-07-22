@@ -5,7 +5,7 @@
 package com.bilibili.socialize.sample.helper;
 
 import android.content.Context;
-import android.support.v4.app.FragmentActivity;
+import androidx.fragment.app.FragmentActivity;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -28,7 +28,7 @@ import com.bilibili.socialize.share.utils.selector.PopWrapSharePlatformSelector;
 public final class ShareHelper {
     public static final String QQ_APPID = "";
     public static final String WECHAT_APPID = "";
-    public static final String SINA_APPKEY = "";
+    public static final String SINA_APPKEY = "1040420100";
 
     static final String APP_URL = "http://app.bilibili.com";
     private FragmentActivity mContext;
